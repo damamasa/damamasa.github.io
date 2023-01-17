@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prijevodi latinskih tekstova</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            *{box-sizing: border-box;}
+
+            body{margin: 0;}
+
+            .naslov_bg{
+                        color:white;
+                        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-size:90px;
+                        text-align:center;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;
+                            }
+
+            .txt1{color:white;
+                font-weight:normal;
+                text-align:center;
+                font-size:30px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                height:150px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    gap: 0px;}
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1F2833;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1F2833;
+                    width: 100vw;
+                    height: 100vh;
+            }
+            
+            .footer{grid-column-start: 1;
+                    grid-column-end: 4;
+                    width: 100vw;
+                    background-color: rgb(92, 92, 92) ;}
+            
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;
+                z-index: 999;
+            }
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white  ;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .button{padding: 0;
+                    margin: 0;
+                    width: 250px;
+                    height: 300px;
+                    text-align: center;
+                    position: relative;
+                    top: 15px;
+                    border-color: #1F2833;
+                    border-radius: 20px;
+                    border-width: 10px;
+                    transition-duration: .60s;
+                    z-index: 1;
+                }
+            
+            #btn1.button{background:url("arhija.jpeg");}
+            #btn2.button{background:url("izobrazba.jpeg");}
+            #btn3.button{background:url("kvint.jpg");}
+            #btn4.button{background:url("ovidije.jpg");}
+            #btn5.button{background: url("ciceron.jpg");}
+
+            .opis_slike{color:white;
+                font-weight:bold;
+                text-align:center;
+                font-size:18px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+            
+            .btnlic{font-weight:normal;
+                text-align:center;
+                font-size:20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-decoration: none;}
+
+                @media only screen and (max-width: 600px) {
+                    .content{height: 600px;}
+                    .naslov_bg{font-size: 45px;margin-top: 60px;}
+                    .txt1{font-size: 20px;width: 100vw;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown{width: 40vw;height: 80vh;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .content{height: 350px;}
+                    .naslov_bg{font-size: 45px;}
+                    .txt1{font-size: 18px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown{width: 70vw;height: 180px;padding: 0;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov_bg">Prijevod iz Pete
+                    <br><br>
+                    <p class="txt1">UKOLIKO UČIŠ LATINSKI I TREBAŠ PRIJEVOD TEKSTOVA IZ UDŽBENIKA <br><strong>LINGUAE LATINAE ELEMENTA 2</strong> NA PRAVOME SI MJESTU</p>
+            </div>
+            <div class="footer">
+                <a href="PjesnikArhija.html"><button class ="button" id="btn1"></button></a>
+                <p class="opis_slike">Pjesnik Arhija </p>
+                <a href="IzobrazbaGovornika.html"><button class ="button" id="btn2"></button></a>
+                <p class="opis_slike">Izobrazba govornika </p>
+                <a href="Spomenik.html"><button class ="button" id="btn3"></button></a>
+                <p class="opis_slike">Spomenik trajniji od mjedi </p>
+                <a href="PjesnikovaSudbina.html"><button class ="button" id="btn4"></button></a>
+                <p class="opis_slike">Pjesnikova tužna sudbina </p>
+                <a href="OPrijateljstvu.html"><button class ="button" id="btn5"></button></a>
+                <p class="opis_slike">O prijateljstvu </p>
+                <br><br>
+                <a href="licence.html" class="btnlic">LICENCE ZA SLIKE</a>
+            </div>
+            <br>
+    </body>
+</html>    

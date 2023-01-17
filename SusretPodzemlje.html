@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Susret u podzemnom svijetu</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{margin: 0;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    }
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;}
+            
+            .footer{grid-column-start: 1;
+                    grid-column-end: 4;
+                    width: 100vw;
+                    background-color: rgb(92,92,92);}
+            
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;}
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .naslov{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    }
+
+            .txt{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 18px;
+                font-weight: normal;
+                color: white;
+                text-align: left;
+                background-color: #2a3542;
+                display: inline-block;
+                width: 30vw;
+                padding: 10px;
+                vertical-align: middle;
+                margin-left: 50px;
+                margin-right: 50px;}
+                
+            
+            .otxt {position: relative;
+                    display: inline-block;
+                    }
+
+            .otxt-content {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 500px;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                            box-sizing:border-box;
+                            box-shadow: 0px 0px 20px 0px}
+
+            .otxt:hover .otxt-content {display: block;}
+
+            .fraze{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 13px;
+                    color: white;
+                    background-color: #1f2833;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20vw;
+                    height: 12vh;
+                    padding: 10px;}
+
+            .btnlic{font-weight:normal;
+                text-align:center;
+                font-size:20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-decoration: none;}
+
+            @media only screen and (max-width: 1470px) {
+                .txt{font-size: 17px ;}
+            }
+
+            @media only screen and (max-width: 1300px) {
+                .txt{font-size: 16px;}
+                .fraze{height: 14vh;}
+            }
+
+            @media only screen and (max-width: 1000px) {
+                .txt{font-size: 13px;}
+            }
+
+            @media only screen and (max-width: 900px) {
+                .fraze{height: 16vh;}
+            }
+
+            @media only screen and (max-width: 1150px) {
+                .txt{font-size: 15px;}
+            }
+
+            @media only screen and (max-width: 600px) {
+                    .content{height: 2700px;}
+                    .naslov{font-size: 45px;margin-top: 100px;}
+                    .txt{font-size: 15px;width: 60vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:55vw;height: 500px;}
+                    .footer{height: 80vh;}
+                    .fraze{width: 40vw;height: 25vh;}
+                    ul li{width: 50vw;padding: 5px;}
+                    .otxt-content{width: 55vw;font-size: 12px;}
+                    .logo{position: absolute;margin-top: 5vh;}
+                    ul{position: absolute;}
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .content{height:1000px;}
+                    .naslov{font-size: 45px;}
+                    .txt{font-size: 15px;width: 80vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:25vw;height: 500px;padding: 0;}
+                    .footer{height: 500px;}
+                    .fraze{width: 40vw;height: 130px;}
+                    ul li{width: 26vw;padding: 5px;}
+                    .otxt-content{width: 40vw;font-size: 12px;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+                
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                    <div class="otxt">
+                        <li><a class="navbarelements">INFORMACIJE O TEKSTU</a></li>
+                        <div class="otxt-content">
+                            <p>Nakon što je Eneja nenadano otišao iz Kartage, Didona si oduzima život. 
+                                Ubrzo u pratnji proročice Sibile trojanski junak silazi u podzemni svijet i ondje nailazi 
+                                na sjenku umrle Didone.
+                            </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov">Susret u podzemnom svijetu</h1>
+                <p class="txt" id="lat">
+                    Aeneas comitante Sibylla ad imas tenebras venit. Ibi locus est nomine 
+                    Lugentes campi. Hic sunt omnes quos durus amor crudeli tabe peredit, 
+                    quos secreti calles celant et myrtea silva circumtegit; curae in ipsa morte 
+                    non relinquunt. Ibi Phoenissa Dido recens e vulnere inter multas 
+                    tristissimas umbras in magna silva errabat. Ut primum iuxta eam Troius vir 
+                    stetit agnovítque obscuram per umbras, demīsit lacrimas dulcíque amōre 
+                    dixit:,infelix Dido, verus mihi nuntius ergo venerat? Exstincta es ferróque 
+                    mortem secuta es? Ego miser funeris tibi causa fui? Per sidĕra, per 
+                    superos et per fidem iuro: invītus, regīna, de tuo litore cessi. Dei, qui nunc 
+                    me per has umbras, per loca senta noctémque profundam cogunt, ita 
+                    iusserunt. Siste gradum teque meo aspectu ne subtrǎhe! Quem fugis? 
+                    Extremum fato hoc est quod te adloquor.' Talibus dictis Aeneasardentem 
+                    et torva tuentem animum lenībat lacrimásque ciebat. Illa solo 
+                    fixos oculos aversa tenebat nec magis vultum movetur. Tandem corripuit 
+                    sese atque inimica in nemus umbrifĕrum refūgit, ubi coniunx pristinus illi 
+                    curis respondet aequátque amōrem. Nec minus Aenēas casu inīquo 
+                    percussus lacrimis longe prosequitur et regīnam miserātur.
+                <p class="txt" id="hrv">
+                    Eneja je prateći Sibilu došao do najdubljeg mraka. Ondje je mjesto imenom Žalobna polja. Ovdje su svi koje
+                    je izjela surova ljubav okrutnom zaraznom bolesti, koje skrivene staze kriju i mrka šuma štiti sa svih strana;
+                    brige ih ne napuštaju niti u samoj smrti. Tamo je Feničanka Didona sa svježom ranom lutala među mnogim najžalosnijim
+                    sjenama u velikoj šumi. Kad je uz nju stao Trojanski junak i prepoznao ju nevidljivu kroz sjene, zaplakao je i 
+                    slatkom ljubavi je govorio: "nesretna Didono, istinska vijest prema meni bijaše došla? Bila si poginula oružjem 
+                    i smrt si bila slijedila? Jadan sam tebi bio uzrok pogreba? Nebom, nebesnikom i vjerom se zaklinjem: nerado sam, 
+                    kraljice, od tvoje morske obale išao. Bogovi, koji sada mene kroz ove sjene, kroz trnovito mjesto i duboku noć
+                    tjeraju, tako bijahu zapovijedili. Postavi svoj korak i ne sklanjaj se mojemu pogledu? Koga se kloniš? Krajna je ova 
+                    sudbina da ti se obratim." Takvim riječima Eneja je goruću i strašnu dušu onu koja gleda umirio i suze je pobudio.
+                    Ona je odvraćena samo držala čvrste oči ni lice više micano nije. Napokon je sebe stegnuo i neprijateljica se 
+                    sklonila u sjenovit gaj, tamo je Sihej onima brigama odgovarao onoj brizi i izjednačio je ljubav. Niti Eneja manje
+                    nepravednim slučajem ganut suzama daleko ne prati i žali kraljicu.
+                </p>
+            </div>
+            <div class="footer">
+                <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-right: 0px;color: white;">IZREKE</h2>
+                <p class="fraze">
+                    <br>
+                    Carmine di superi placantur, carmine Manes.<br><br>
+                    Pjesmom se ublažuju nebeski bogovi, pjesmom duše pokojnika.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Vincuntur molli pectora dura prece.<br><br>
+                    Blagom molbom pobjeđuju se tvrda srca.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Undique ad inferos tantumdem viae est.<br><br>
+                    Sa svih strana jednako je daleko od podzemlja.
+                </p>
+                <br><br>
+                <a href="licence.html" class="btnlic">LICENCE ZA SLIKE</a>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pjesnikova tužna sudbina</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{margin: 0;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    }
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;}
+            
+            .footer{grid-column-start: 1;
+                    grid-column-end: 4;
+                    width: 100vw;
+                    background-color: rgb(92,92,92);}
+            
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;}
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .naslov{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    }
+
+            .txt{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 18px;
+                font-weight: normal;
+                color: white;
+                text-align: left;
+                background-color: #2a3542;
+                display: inline-block;
+                width: 30vw;
+                padding: 10px;
+                vertical-align: middle;
+                margin-left: 50px;
+                margin-right: 50px;}
+                
+            
+            .otxt {position: relative;
+                    display: inline-block;
+                    }
+
+            .otxt-content {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 520px;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                            box-sizing:border-box;
+                            box-shadow: 0px 0px 20px 0px}
+
+            .otxt:hover .otxt-content {display: block;}
+
+            .fraze{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 13px;
+                    color: white;
+                    background-color: #1f2833;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20vw;
+                    height: 12vh;
+                    padding: 10px;}
+
+            .btnlic{font-weight:normal;
+                text-align:center;
+                font-size:20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-decoration: none;}
+
+            @media only screen and (max-width: 1470px) {
+                .txt{font-size: 17px ;}
+            }
+
+            @media only screen and (max-width: 1300px) {
+                .txt{font-size: 16px;}
+                .fraze{height: 15vh;}
+            }
+
+            @media only screen and (max-width: 900px) {
+                .fraze{height: 18vh;}
+            }
+
+            @media only screen and (max-width: 1150px) {
+                .txt{font-size: 15px;}
+            }
+
+            @media only screen and (max-width: 600px) {
+                    .content{height: 1900px;}
+                    .naslov{font-size: 45px;margin-top: 100px;}
+                    .txt{font-size: 15px;width: 60vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:55vw;height: 500px;}
+                    .footer{height: 900px ;}
+                    .fraze{width: 40vw;height: 200px;}
+                    ul li{width: 50vw;padding: 5px;}
+                    .otxt-content{width: 55vw;font-size: 12px;}
+                    .logo{position: absolute;margin-top: 5vh;}
+                    ul{position: absolute;}
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .content{height: 235vh;}
+                    .naslov{font-size: 45px;}
+                    .txt{font-size: 15px;width: 80vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:25vw;height: 500px;padding: 0;}
+                    .footer{height: 650px;}
+                    .fraze{width: 40vw;height: 100px;}
+                    ul li{width: 26vw;padding: 5px;}
+                    .otxt-content{width: 40vw;font-size: 12px;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+                
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                    <div class="otxt">
+                        <li><a class="navbarelements">INFORMACIJE O TEKSTU</a></li>
+                        <div class="otxt-content">
+                            <p>Publija Ovidija Nazona, jednog od najvećih rimskih pjesnika, car August u vrijeme pjesnikove najveće slave zbog 
+                                nejasnih razloga šalje u progonstvo u Tome (danas Constanza u Rumunjskoj) na obalu Crnoga mora. 
+                                Pjesnik u svojim stihovima oplakuje tužnu sudbinu. </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov">Pjesnikova tužna sudbina</h1>
+                <p class="txt" id="lat">
+                    Augustus imperator, virtutes maiorum restituens, Ovidium poēlam, erroris aut carminis causa, incertum est, ad terras remotas 
+                    in ponti per multos Euxini oras expulit. Miser poeta, longe domo absens, in Ponto annos sortem suam miserrimam flebit. 
+                    Cum in mentem eius tristissima imago supremae noctis in Urbe venerit, qua carissimas res totámque vitam reliquit, oculi 
+                    eius abunde lacrimabunt. Poeta frustra in spe vivebat atque censebat: „Si Augusto elogium scripsero, imperator me liberabit". 
+                    Post Augustum Tiberius regnabat, nec eum preces moverunt. Ovidius amicis quoque scribebat, sed auxilio carens, post 
+                    viginti annos, in Ponto vità discessit. Aeger, solus et tristis de sorte sua ita cogitabat: „Quidquid egěró, sors mea eadem 
+                    erit. Tam procul, in ignotis oris nemo erit qui sortem meam deflebit cum e vita decesseró. Caput meum sine funeribus, 
+                    sine honore sepulcri indeploratum barbăra terra teget."
+                <p class="txt" id="hrv">
+                    Car August, vraćajući vrline predaka, pjesnika Ovidija potjerao je, radi pogrešle ili pjesme, nije sigurno, do dalekih zemlja
+                    na obale Crnog mora. Jadan pjesnik, dugo odsutan od kuće, u Pontu kroz mnogo godina oplakivat će svoju najjadniju sudbinu. Kad
+                    god u njegov um bude došla najžalosnija slika posljednje noći u gradu u kojem je napustio najdraže stvari i čitav život, njegove 
+                    će oči previše suziti. Pjesnik je uzalud živio u nadi i mislio je: "Ako budem napisao pohvalni natpis Augustu, car će me osloboditi."
+                    Poslije Augusta vladao je Tiberije, niti njega nisu pokrenule molbe. Ovidije je također pisao prijateljima, ali nemajući pomoć, 
+                    poslije 20 godina, na Pontu je umro. Bolestan sam i nesretan o svojoj sudbini tako mislio: "Što god budem učinio, moja sudbina bit će ista."
+                </p>
+            </div>
+            <div class="footer">
+                <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-right: 0px;color: white;">IZREKE</h2>
+                <p class="fraze">
+                    <br>
+                    Barbarus hic ego sum, quia non intellegor ulli.<br><br>
+                    Tu sam ja barbarin jer me nitko ne razumije.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Cede repugnanti: cedendo victor abibis.<br><br>
+                    Popusti protivniku: otići ćeš kao pobjednik ako popustiš.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Omnia mutantur, nihil interit.<br><br>
+                    Sve se mijenja, ništa ne propada.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Perfer et obdura! Dolor hic tibi proderit olim.<br><br>
+                    Strpljivo podnesi i ustraj! Bol će ti ova jednom koristiti.
+                </p>
+                <p class="fraze">
+                    <br>
+                    Ut sementem feceris, ita metes.<br><br>
+                    Kako posiješ, tako ćeš i požeti.
+                </p>
+                <br><br>
+                <a href="licence.html" class="btnlic">LICENCE ZA SLIKE</a>
+            </div>
+    </body>
+</html>

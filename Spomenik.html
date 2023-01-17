@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spomenik trajniji od mjedi</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{margin: 0;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    }
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;}
+            
+            .footer{grid-column-start: 1;
+                    grid-column-end: 4;
+                    width: 100vw;
+                    background-color: rgb(92,92,92);}
+            
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;}
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .naslov{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    }
+
+            .txt{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 18px;
+                font-weight: normal;
+                color: white;
+                text-align: left;
+                background-color: #2a3542;
+                display: inline-block;
+                width: 30vw;
+                padding: 10px;
+                vertical-align: middle;
+                margin-left: 50px;
+                margin-right: 50px;}
+                
+            
+            .otxt {position: relative;
+                    display: inline-block;
+                    }
+
+            .otxt-content {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 520px;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                            box-sizing:border-box;
+                            box-shadow: 0px 0px 20px 0px}
+
+            .otxt:hover .otxt-content {display: block;}
+
+            .fraze{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 13px;
+                    color: white;
+                    background-color: #1f2833;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20vw;
+                    height: 12vh;
+                    padding: 10px;}
+            
+            .btnlic{font-weight:normal;
+                text-align:center;
+                font-size:20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-decoration: none;}
+
+            @media only screen and (max-width: 1470px) {
+                .fraze{font-size: 12px ; width: 30vw;}
+                .txt{font-size: 17px ;}
+            }
+
+            @media only screen and (max-width: 1300px) {
+                .txt{font-size: 16px;}
+            }
+
+            @media only screen and (max-width: 900px) {
+                .fraze{width: 35vw;}
+            }
+
+            @media only screen and (max-width: 1150px) {
+                .txt{font-size: 15px;}
+            }
+
+            @media only screen and (max-width: 600px) {
+                    .content{height: 1750px;}
+                    .naslov{font-size: 45px;margin-top: 100px;}
+                    .txt{font-size: 15px;width: 60vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:55vw;height: 500px;}
+                    .footer{height: 1100px;}
+                    .fraze{width: 50vw;height: 150px;}
+                    ul li{width: 50vw;padding: 5px;}
+                    .otxt-content{width: 55vw;font-size: 12px;}
+                    .logo{position: absolute;margin-top: 5vh;}
+                    ul{position: absolute;}
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .content{height: 750px;}
+                    .naslov{font-size: 45px;}
+                    .txt{font-size: 15px;width: 80vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:25vw;height: 500px;padding: 0;}
+                    .footer{height: 600px;}
+                    .fraze{width: 40vw;height: 100px;}
+                    ul li{width: 26vw;padding: 5px;}
+                    .otxt-content{width: 40vw;font-size: 12px;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+                
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                    <div class="otxt">
+                        <li><a class="navbarelements">INFORMACIJE O TEKSTU</a></li>
+                        <div class="otxt-content">
+                            <p>Slavni rimski pjesnik Kvint Horacije Flak svoju je buduću slavu sam predvidio u jednoj od svojih pjesama 
+                                čiji se početak i danas često citira: "Podigoh sebi spomenik od mjedi trajniji, od piramida viši i slavniji.” </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov">Spomenik trajniji od mjedi</h1>
+                <p class="txt" id="lat">
+                    Quintus Horatius Flaccus, egregius poeta Romānus, versibus suis sibi monumentum exegit aere perennius regalíque 
+                    situ pyramĭdum altius. Istud monumentum nec Aquilo impotens nec innumerabilis annōrum series neque temporum 
+                    fuga diruĕre potuit. Poēta non omnis e vita decessit et multa pars ei mortem vitavit. Antequam e vita decesserat,
+                    de sua gloria futura ipse scripsit: „Dum Capitolium scandet cum tacita virgine pontifex, usque ego laude recens 
+                    semper vivam." Merito multi de Horatio dicebant: „Poeta humili loco natus, princeps Aeolium carmen ad Itǎlos 
+                    modos deduxit. Musa comam eius Delphica lauro merito cinxit." Poëtae versus mortem vicerunt atque poetam 
+                    inter astra duxerunt.
+                <p class="txt" id="hrv">
+                    Kvint Horacije Flak, izvrstan rimski pjesnik, svojim stihovima podigao je sebi spomenik od mjeda trajniji i viši 
+                    od položaja kraljevske piramide. Taj spomenik nije mogao razrušiti niti silan sjevernjak niti red nebrojenih godina 
+                    niti bijeg vremena. Pjesnik nije sav otišao od života i velik dio njega izbjegavao je smrt. Prije nego što je preminuo, 
+                    o svojoj budućoj slavi sam je zapisao: "Dok će se svećenik uspinjati na Kapitolij s nijemom djevojkom, ja ću neprestano živjeti
+                    uvijek novim pohvalama." S pravom su mnogi govorili o Horaciju: "Pjesnik rođen u skromnom mjestu, prvi je doveo eolsku pjesmu
+                    na italske ritmove. Muza je njegovu kosu s pravom ogradila delfijskim lovorom." Pjesnikovi stihovi su pobijedili smrt i pjesnika 
+                    odveli među zvijezde.
+                </p>
+            </div>
+            <div class="footer">
+                <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-right: 0px;color: white;">IZREKE</h2>
+                <p class="fraze">
+                    Audax omnia perpeti gens humana ruit per vetitum nefas.<br><br>
+                    Smion da sve podnese, ljudski rod hrli u zabranjeno zlo.
+                </p>
+                <p class="fraze">
+                    Aequum est peccatis veniam poscentem reddere rursus.<br><br>
+                    Onaj tko traži oprost grijeha, trebao bi drugima oprostiti.
+                </p>
+                <p class="fraze">
+                    Aequa lege Necessitas sortitur insignes et imos.<br><br>
+                    Nužda po pravičnom zakonu odabire odlične i najniže.
+                </p>
+                <p class="fraze">
+                    Beatus ille qui procul negotiis, paterna rura bobus exercet suis.<br><br>
+                    Blažen je onaj tko daleko od državnih poslova očinska polja obrađuje svojim volovima.
+                </p>
+                <p class="fraze">
+                    Dum vitant stulti vitia, in contraria currunt.<br><br>
+                    Dok izbjegavaju mane, luđaci zapadaju u suprotnosti.
+                </p>
+                <br><br>
+                <a href="licence.html" class="btnlic">LICENCE ZA SLIKE</a>
+            </div>
+    </body>
+</html>

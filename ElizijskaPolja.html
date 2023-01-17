@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elizijska polja</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            *{box-sizing: border-box;}
+
+            body{margin: 0;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    }
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;}
+            
+            .footer{grid-column-start: 1;
+                    grid-column-end: 4;
+                    width: 100vw;
+                    background-color: rgb(92, 92, 92);}
+            
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;}
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .naslov{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    }
+
+            .txt{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 18px;
+                font-weight: normal;
+                color: white;
+                text-align: left;
+                background-color: #2a3542;
+                display: inline-block;
+                width: 30vw;
+                padding: 10px;
+                vertical-align: middle;
+                margin-left: 50px;
+                margin-right: 50px;}
+                
+            
+            .otxt {position: relative;
+                    display: inline-block;
+                    }
+
+            .otxt-content {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 520px;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                            box-sizing:border-box;
+                            box-shadow: 0px 0px 20px 0px}
+
+            .otxt:hover .otxt-content {display: block;}
+
+            .fraze{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 14px ;
+                    color: white;
+                    background-color: #1f2833;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20vw;
+                    height: 10vh;
+                    padding: 10px;}
+
+            .btnlic{font-weight:normal;
+                text-align:center;
+                font-size:20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-decoration: none;}
+
+            @media only screen and (max-width: 1470px) {
+                .fraze{font-size: 12px ;}
+                .txt{font-size: 17px ;}
+            }
+
+            @media only screen and (max-width: 1200px) {
+                .txt{font-size: 16px;}
+            }
+
+            @media only screen and (max-width: 1199px) {
+                .fraze{height: 11vh;}
+            }
+
+            @media only screen and (max-width: 1000px) {
+                .fraze{height: 13vh;}
+            }
+
+            @media only screen and (max-width: 800px) {
+                .txt{font-size: 13px;}
+                .fraze{height: 16vh;}
+            }
+
+            @media only screen and (max-width: 600px) {
+                    .content{height: 2100px;}
+                    .naslov{font-size: 45px;margin-top: 100px;}
+                    .txt{font-size: 15px;width: 80vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:55vw;height: 500px;}
+                    .footer{height: 700px;}
+                    .fraze{width: 40vw;height: 150px;}
+                    ul li{width: 50vw;padding: 5px;}
+                    .otxt-content{width: 55vw;font-size: 12px;}
+                    .logo{position: absolute;margin-top: 5vh;}
+                    ul{position: absolute;}
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .content{height: 950px;}
+                    .naslov{font-size: 45px;}
+                    .txt{font-size: 15px;width: 80vw;margin: 0;padding: 30px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown {width:25vw;height: 500px;padding: 0;}
+                    .footer{height: 500px;}
+                    .fraze{width: 40vw;height: 100px;}
+                    ul li{width: 26vw;padding: 5px;}
+                    .otxt-content{width: 40vw;font-size: 12px;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+                
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                    <div class="otxt">
+                        <li><a class="navbarelements">INFORMACIJE O TEKSTU</a></li>
+                        <div class="otxt-content">
+                            <p>Zbirka pjesama tradicionalno nazvana Tibulov zbornik sadržava tri knjige elegija od kojih su samo prve dvije, s 
+                                ukupno 16 elegija, doista Tibulove. U njegovim stihovima ima dosta autobiografskih podataka. </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov">Elizijska polja</h1>
+                <p class="txt" id="lat">
+                    Albius Tibullus in locupleti familia equestri natus in bellis civilibus bona sua amisit, sed postea recuperavit. Amicus Marci 
+                    Valerii Messallae fuit circulúmque eius intravit. Messallam in pugnis saepe comitabatur. Una multum proficiscebantur. 
+                    Olim in itinere morbo affectus est Corcyraeque aliquo tempore remansit. Postremo Romam revenerat et elegias scribere
+                    coepit. Iuvenis e vita discessit. Sortem suam in versibus Tibullus non deflebat, sed ita dicebat: „Cum sepultus ero, 
+                    haec inscriptio in monumento tumuli mei esto: Hic iacet immití || consumptus morte Tibullus, Messallám terrá || dúm sequiturque marí." 
+                    Cum mortuus erit, poeta a Venere in campos Elysios ducētur quia semper facilis erat tenĕro Amōri. Ibi choreae cantusque vigent,
+                    passimque vagantes aves carmen dulce gutture sonare solent. Non culta seges casiam fert, per totos agros odoratis rosis
+                    benigna terra floret. Si poetae vota post mortem eius expleta erunt, id erit quia versibus suis gloriam aeternam sibi paravit.
+                <p class="txt" id="hrv">
+                    Albije Tulije rođen u bogatoj konjaničkoj obitelji u građanskim ratovima izgubio je svoja imanja, ali poslije ih je opet pridobio.
+                    Bio je prijatelj Marka Valerija Mesale i ušao je u njegovo društvo. Mesalu je često pratio u bitkama. Zajedno su mnogo putovali.
+                    Nekoć na putu bio je oslabljen bolešću i neko vrijeme ostao je na Krfu. Napokon se bijaše vratio u Rim i počeo je pisati elegije.
+                    Umro je mlad. Svoju sudbinu Tibulije u stihovima nije oplakivao, ali je tako govorio: "Kad budem bio pokopan, ovaj natpis neka bude 
+                    na spomeniku mome: Ovdje počiva nezreo Tibilije iništen smrću, dok je na kopnu i na moru slijedio Mesalu." Kada bude bio umro, pjesnik 
+                    je vođen od Venere na Elizijska polja jer je uvijek bio poslušan nježnom Amoru. Tamo su kola i pjesme vrijedne, posvuda i lutajuće 
+                    ptice pjesmu slatko grlom običavaju šumiti. Neobrađena njiva nosi miomirisnu travu, kroz čitava polja mirisnim ružama obilna zemlja
+                    cvate. Ako želje pjesnika poslije njegove smrti budu bile ispunjene, on će biti jer svojim stihovima vječnu slavu sebi je pripravio.
+                </p>
+            </div>
+            <div class="footer">
+                <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-right: 0px;color: white;">IZREKE</h2>
+                <p class="fraze">
+                    Dulce et decorum est pro patria mori.<br><br>
+                    Slatko je i časno umrijeti za domovinu.
+                </p>
+                <p class="fraze">
+                    Mors et fugacem persequitur virum.<br><br>
+                    Smrt dostigne i čovjeka koji bježi.
+                </p>
+                <p class="fraze">
+                    Mors certa, hora incerta.<br><br>
+                    Smrt je sigurna, čas smrti nesiguran.
+                </p>
+                <p class="fraze">
+                    Amor omnia vincit.<br><br>
+                    Ljubav pobjeđuje sve.
+                </p>
+                <p class="fraze">
+                    Donis vincitur omnis amor.<br><br>
+                    Darovima se pobjeđuje svaka ljubav.
+                </p>
+                <br><br>
+                <a href="licence.html" class="btnlic">LICENCE ZA SLIKE</a>
+            </div>
+    </body>
+</html>
