@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Licence za slike</title>
+        <link rel="shortcut icon" type="image" href="logofirme2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{margin: 0;}
+
+            .navbarelements {border:2px solid white;
+                            border-radius:20px;}
+
+            .container{width: 100vw;
+                    height: 100vh;
+                    color:black;
+                    font-weight:normal;
+                    text-align:center;
+                    font-size:20px;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: 50px auto;
+                    }
+            
+            .header{grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;
+                    }
+
+            .content{grid-row-start:2;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    background-color: #1f2833;
+                    width: 100vw;}
+                       
+            .logo{position:fixed;
+                right:0px;}
+            
+            ul {list-style: none;
+                margin: 0;
+                padding: 10px;
+                position: fixed;}
+    
+            ul li {display: inline-block;}
+
+            ul li a {display: block;
+                    padding: 5px 25px;
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size:15px;
+                    font-family:Arial;
+                    font-weight:bold;}
+
+            ul li ul.dropdown li a {	
+                    color:black;
+                    font-size:14px;
+                    font-family:Arial;}
+
+            ul li ul.dropdown {display:none;
+                            position: absolute;
+                            background-color:white;
+                            width: 250px;
+                            box-sizing:border-box;
+                            height:400px;
+                            box-shadow: 0px 0px 20px 0px}
+                                
+            ul li:hover ul.dropdown {display: block;}
+                                        
+            li a:hover:not(nijekliknuto) {background-color: grey;}
+
+            .naslov{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 90px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    }
+
+            .txt{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-weight: normal;
+                color: white;
+                text-align: left;
+                background-color: #2a3542;
+                width: 80vw;
+                padding: 20px;
+                margin-left:150px; 
+                margin-top: 150px;
+            }
+
+            .links{text-decoration: none;
+                    color: white;}
+
+                @media only screen and (max-width: 600px) {
+                    .naslov{font-size:45px;margin-top: 60px;}
+                    ul li a{font-size: 10px;}
+                    ul li ul.dropdown li a {font-size: 12px;}
+                    ul li ul.dropdown{width: 40vw;height: 500px;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                    .txt{font-size: 15px;margin: auto;margin-top: 130px;}
+                    
+                }
+
+                @media only screen and (max-width: 812px) and (min-width:601px){
+                    .txt{margin: auto;}
+                    .logo{position: absolute;}
+                    ul{position: absolute;}
+                }
+            </style>
+        </head>
+        <body>
+        <div class="container">
+            <div class="header">
+                <img src="rakun.png" class="logo">
+                <ul>
+                    <li><a href="index.html" class="navbarelements" >POČETNA STRANICA</a></li>
+                       <li><a class="navbarelements">TEKSTOVI</a>
+                            <ul class="dropdown">
+                            <li><a href="PjesnikArhija.html">Pjesnik Arhija</a></li>
+                            <li><a href="PrijateljskiSavjeti.html">Prijateljski savjeti</a></li>
+                            <li><a href="IzobrazbaGovornika.html">Izobrazba govornika</a></li>
+                            <li><a href="GrčkaJe.html">Grčka je uzor Rimu</a></li>
+                            <li><a href="OPrijateljstvu.html">O prijateljstvu</a></li>
+                            <li><a href="OStarosti.html">O starosti</a></li>
+                            <li><a href="Spomenik.html">Spomenik trajniji od mjedi</a></li>
+                            <li><a href="PjesnikovaSudbina.html">Pjesnikova tužna sudbina</a></li>
+                            <li><a href="LjubavnoUmijeće.html">Ljubavno umijeće</a></li>
+                            <li><a href="ElizijskaPolja.html">Elizijska polja</a></li>
+                            <li><a href="MrzimVolim.html">Mrzim i volim</a></li>
+                            <li><a href="SusretPodzemlje.html">Susret u podzemnom svijetu</a></li>
+                        </ul>
+                        </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 class="naslov">Licence za slike</h1>
+                <p class="txt">
+                    <a href="https://commons.wikimedia.org/wiki/File:Quintilian,_Institutio_oratoria_ed._Burman_(Leiden_1720),_frontispiece.jpg" class="links"><strong>Izobrazba Govornika</strong></a>
+                    <br><br><a href="https://brewminate.com/wp-content/uploads/2018/09/091518-26-Cicero-Rome-Roman-Ancient-History.jpg" class="links"><strong>Pjesnik Arhija</strong></a> 
+                    <br><br><a href="https://commons.wikimedia.org/wiki/File:Quintus_Horatius_Flaccus.jpg" class="links"><strong>Spomenik trajniji od mjedi</strong></a>
+                    <br><br><a href="https://commons.wikimedia.org/wiki/File:Latin_Poet_Ovid.jpg" class="links"><strong>Pjesnikova tužna sudbina</strong></a>
+                    <br><br><a href="https://commons.wikimedia.org/wiki/File:Marcus_Tullius_Cicero_1777.jpg" class="links"><strong>O prijateljstvu</strong></a> 
+                </p>
+            </div>
+                   
+    </body>
+</html>
